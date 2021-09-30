@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Roboto', sans-serif;
+        }
+        header {
+            width: 100%;
+            height: 70px;
+            background-color: white;
+            position: fixed;
+            top: 0px;
+            margin: 0px;
+            z-index: 1;
+            box-shadow: 0px 2px 2px -1px rgb(0 0 0 / 20%);
+        }
+
+        #img1 {
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        #img2 {
+            margin: 0;
+            height: 45px;
+            cursor: pointer;
+        }
+
+        #img3 {
+            float: right;
+            padding: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        #signinbtn {
+            background-color: red;
+            padding: 10px;
+            float: right;
+            width: 100px;
+            border-radius: 5px;
+            margin: 15px;
+            border: 0;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%);
+        }
+        #signinbtn:hover {
+            background-color: rgb(94, 2, 2);
+        }
+
+       body{
+           background-color: rgb(241, 240, 240);
+       }
+       .image img{
+           margin-left: 7%;
+           margin-right: 10px;
+           width: 20%;
+           float: left;
+           box-shadow: 1px 1px 1px 1px darkgray;
+           margin-top: 80px;
+           
+       }
+       .course{
+           margin-right: 7%;
+           width: 65%;
+           height: auto;
+           background-color: white;
+           float: left;
+           margin-bottom: 20px;
+           border-radius: 5px;
+           box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%);
+           margin-top: 80px;
+       }
+       .details{
+           margin: 20px;
+           font-family: 'Roboto', sans-serif;            
+           color: rgb(83, 83, 83);
+       }
+       .intern1 {
+           display: grid;
+           grid-template-columns: 20% 60% 20%;
+       }
+       .intern1 img{
+           width: 90px;
+           align-items: center;
+           padding: 20px;
+       }
+       button{
+           background-color:white;
+           width: 130px;
+           color: rgb(0, 171, 238);
+           border: white;
+           margin-top: 80px;
+       }
+       .apply1{
+           margin-left: 30px;
+       }
+       .apply1 p{
+           margin-left: 50px;
+       }
+       .apply2{
+           margin-left: 30px;
+       }
+       .apply2 p{
+           margin-left: 30px;
+       }
+       #line{
+           width: auto;
+           border: 1px dashed rgb(199, 198, 198);
+       }
+       .details button{
+           height: 40px;
+           border-radius: 5px;
+           color: rgb(0, 47, 255);
+           font-family: 'Roboto', sans-serif;            
+           font-size: 15px;
+       }
+       .details button:hover{
+        background-color: rgb(222, 247, 252);
+       }
+       .image :hover{
+        opacity: 0.8;
+       }
+       .details h3{
+           margin-top: 15px;
+           margin-bottom: 10px;
+       }
+       .intern1 p {
+        margin-bottom: 10px;
+       }
+       #end{
+            width: 100%;
+            height: 0px;
+            background-color: rgb(241, 240, 240);
+            margin-top: 50px;
+            clear: both;
+        }
+
+        #main {
+            width: 100%;
+            height: 30%;
+            background-color: #446478;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+        }
+        #content {
+            padding: 1% 8%;
+        }
+        #upper_part {
+            display: grid;
+            grid-template-columns: 10% 25% 25% 25%;
+            gap: 3%;
+            margin: auto;
+        }
+        #detail {
+            display: grid;
+            grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10%;
+            gap: 2%;
+            border-bottom: 1px solid rgb(204, 200, 200);
+        }
+        #year {
+            text-align: center;
+        }
+        #upper_part{
+            padding-top: 30px;
+        }
+        #upper_part p{
+            padding-top: 10px;
+        }
+        #upper_part h4 {
+            border-bottom: 1px solid rgb(207, 202, 202);
+            padding-bottom: 10px;
+            color: white;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+        }
+        #upper_part h3 {
+            font-size: 14px;
+            color: white;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+        }
+        #lower_part{
+            padding-top: 30px;
+        }
+        #lower_part h3{
+          font-size: 14px;
+            color: white;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+        }
+        #main img {
+            width: 20%;
+            margin: 5px;
+        }
+        #image {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        #detail{
+            padding-left: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <img src="https://image.flaticon.com/icons/png/512/1828/1828859.png" id="img1" />
+            <img src="https://assets.interntheory.com/creative/logo.png" id="img2" />
+            <button id="signinbtn"><a  style="color: white;text-decoration: none";
+                href="login_student.html">SIGN OUT</a></button>
+             <img src="https://image.flaticon.com/icons/png/512/4297/4297127.png" id="img3" />
+
+        </div>
+    </header>
+
+    <div id="body">
+        <div class="image">
+            <img src="https://assets.interntheory.com/creative/Internship_left_course_add_01.png">
+        </div>
+
+        <div class="course" >
+            <div class="details" id="allCourse">
+                <p style="font-family: 'Roboto', sans-serif; font-size: 25px; margin-bottom: 0px;">All Internships</p>
+
+                <!-- Courses -->
+                <div class="intern1"  id="d1">
+                    
+                    <img src="https://assets.interntheory.com/creative/logo.png">
+                    
+                    <div class="details1">
+                        <h3>Develop Your Skillset</h3>
+                        <p>Online Skill Development Programs
+
+                        Taught by Industry Experts Internship
+                        
+                        Certified Courses</p>
+                        <p>Guaranteed Internship Opportunities</p>
+                        <h4>Learn Industry-Demanded Skills</h4>
+                    </div>  
+                    <div class="apply1">
+                        <p>4-6 Weeks</p>
+                        <button><a style="color: rgb(0, 47, 255);text-decoration: none;" href="onlinecourse.html">UPGRADE SKILLS</a></button>
+                    </div>  
+                </div>
+                <div id="line"></div>
+                <!-- Interns -->
+                <% internships_data.forEach(function(el){ %>
+                <div class="intern1"  id="d1">
+                    
+                    
+
+                    <img src= <%= el.image_url %> />
+
+                    <div class="details1">
+                        <h3><%= el.title %></h3>
+                        <p><%= el.company_name %></p>
+                        <p><%= el.type %></p>
+                        <p><%= el.category %></p>
+                        
+                        <% let arr = "" %>
+                        <% for (let i = 0; i < el.cities.length-1; i++){ %>
+                        <% arr += el.cities[i] + "," %>
+                        <% } %>
+                        <% arr += el.cities[el.cities.length-1] %>
+                        <!-- <% arr.slice(0,-1)%> -->
+                        <p><%= arr %></p>
+                        <h4>Stipend: <%= el.stipend %> </h4>
+                    
+                    </div>  
+                    <div class="apply1">
+                        <p><%= el.time_left %></p>
+                        <button><a style="color: rgb(0, 47, 255);text-decoration: none;" href="onlinecourse.html">UPGRADE SKILLS</a></button>
+                    </div><br>
+                </div>
+                <div id="line"></div>
+                <% }) %>
+            </div> 
+        </div>
+        <div id="end"></div>
+   </div>
+
+
+   <div id="main">
+    <div id="content">
+         <div id="upper_part">
+             <div id="image">
+                 <img src="https://image.flaticon.com/icons/png/512/220/220200.png"/>
+                 <img src="https://image.flaticon.com/icons/png/512/1409/1409945.png"/>
+                 <img src="https://image.flaticon.com/icons/png/512/124/124021.png"/>
+                 <img src="https://image.flaticon.com/icons/png/512/2111/2111463.png"/>
+             </div>
+             <div id="place">
+                 <h4>BY PLACE</h4>
+                 <p>Internships In Mumbai</p>
+                 <p>Internships In Delhi</p>
+                 <p>Internships In Bangalore</p>
+                 <p>Internships In Pune</p>
+                 <p>Internships In Hyderabad</p>
+             </div>
+             <div id="profile">
+                     <h4>BY PROFILE</h4>
+                     <p>Marketing Internships</p>
+                     <p>Business Development Internships</p>
+                     <p>Content Writing Internships</p>
+                     <p>Graphic Designing Internships</p>
+                     <p>HR Internships</p>
+                     <p>Engineering Internships</p>
+             </div>
+             <div id="type">
+                 <h4>BY TYPE</h4>
+                 <p>Full Time Internships</p>
+                 <p>Part Time Internships</p>
+                 <p>Work From Home Internships</p>
+             </div>
+         </div>
+         <div id="lower_part">
+             <div id="detail">
+                 <h3>FIND INTERNSHIP</h3>
+                 <h3>POST INTERNSHIP</h3>
+                 <h3>COURSES</h3>
+                 <h3>TERMS AND CONDITIONS</h3>
+                 <h3>PRIVACY POLICY</h3>
+                 <h3>CONTACT US</h3>
+                 <h3>ABOUT US</h3>
+                 <h3>SITEMAP</h3>
+             </div>
+             <div id="year">
+                 <h3>© 2015 - 2021 INTERNTHEORY. ALL RIGHTS RESERVED.</h3>
+             </div>
+         </div>
+   </div>
+</div> 
+</body>
+</html>
+
+<script>
+    document.getElementById("img2").addEventListener("click" ,function(){
+        location.href="home.html"
+    })
+
+    document.getElementById("img3").addEventListener("click" ,function(){
+        location.href="cart.html"
+    })
+
+    document.getElementById("img1").addEventListener("click" ,function(){
+        location.href="internship.html"
+    })
+</script>
+
+
+
+
