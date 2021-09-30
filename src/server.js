@@ -14,6 +14,7 @@ const Type = require("./models/type.model");
 const City = require("./models/city.model");
 const Category = require("./models/category.model");
 const Internship = require("./models/internships.model");
+const Course = require("./models/course.model");
 
 
 // const internships_controller = require("./controllers/internships.controller")
@@ -43,8 +44,19 @@ app.get("/AllInternships", async (req, res) => {
     })
 })
 
+app.get("/Courses", async (req, res) => {
+
+    const courses_data = await Course.find().lean().exec();
+    //console.log(course);
+
+     res.render("course",{
+         courses_data:courses_data
+    })
+})
+
 
 // POST Requests
+
 
 router.post("", async (req, res) => {
 
@@ -72,6 +84,13 @@ router.post("", async (req, res) => {
     const internships = await Internship.create(req.body);
    // console.log(internships);
     return res.status(201).send(internships);
+})
+
+router.post("", async (req, res) => {
+
+    const course = await Course.create(req.body);
+   // console.log(course);
+    return res.status(201).send(course);
 })
 
 

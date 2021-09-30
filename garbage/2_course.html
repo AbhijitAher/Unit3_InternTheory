@@ -1,0 +1,154 @@
+var course=[
+
+      {
+          image:"https://assets.interntheory.com/creative/courses/thumbnails/it.jpg",
+          name:"It starter pack(4 courses)  ",
+          line:"--------------------------------------------",
+          price:"15999",
+          EMI:"starting at 915/month",
+          Des:"learn the most demanded skills in the IT industry today.sig...",
+      },
+
+      {
+          image:"https://assets.interntheory.com/creative/courses/thumbnails/finthumbnail.jpg",
+          name:"Finance Starter Pack  ",
+          line:"--------------------------------------------",
+          price:"11999",
+          EMI:"starting at 687/month",
+          Des:"learn the most demanded skills in the finance industry today ...",
+      },
+
+     {
+         image:"https://assets.interntheory.com/creative/courses/thumbnails/digital-marketing-course.png",
+         name:"Digital Marketing Course            ",
+         line:"--------------------------------------------",
+         price:"5999",
+         EMI:"starting at 343/month",
+         Des:"Learn the art of digital marketing. Sign up for this online ...",
+
+     },
+
+     {
+         image:"https://assets.interntheory.com/creative/courses/thumbnails/stock-market-course.png",
+         name:"Stock market course ",
+         line:"--------------------------------------------",
+         price:"5999",
+         EMI:"starting at 343/month",
+         Des:"Learn how to trade and invest in stock markets.Enroll for the.."
+     },
+
+    {
+       image:"https://assets.interntheory.com/creative/courses/thumbnails/data-analytics-r-programming-course.png",
+       name:"Data Analytics with R programming Course           ",
+       line:"--------------------------------------------",
+       price:"5999",
+       EMI:"starting at 343/month",
+       Des:"Learn data science online .."
+    },
+
+    {
+        image:"https://assets.interntheory.com/creative/courses/thumbnails/web-development-course.png",
+        name:"Web development Course    ",
+        price:"3999",
+        line:"--------------------------------------------",
+        EMI:"starting at 229/month",
+        Des:"Learn the art of web designing and web development.join this .."
+    },
+
+    {
+      image:"https://assets.interntheory.com/creative/courses/thumbnails/tally-gst-course.png",
+      name:"Tally + GST Course        ",
+      line:"--------------------------------------------",
+      price:"5999",
+      EMI:"EMI starts at ₹343/month",
+      Des:"Sign up for this online tally and gst course and learn how t ...",
+    },
+
+    {
+      image:"https://assets.interntheory.com/creative/courses/thumbnails/android-app-development-kotlin-course.png",
+      name:"Android App Development Using Kotlin Course        ",
+      price:"5999",
+      line:"--------------------------------------------",
+      EMI:"EMI starts at ₹343/month",
+      Des:"Learn the art of android app..",
+    },
+
+    {
+      image:"https://assets.interntheory.com/creative/courses/thumbnails/advanced-excel-course.png",
+      name:"Advanced Excel Course           ",
+      price:"2999",
+      line:"--------------------------------------------",
+      EMI:"EMI starts at ₹172/month",
+      Des:"Learn how to trade and invest in stock markets. Enrol for th ...",
+    },
+
+    {
+      image:"https://assets.interntheory.com/creative/courses/thumbnails/r-programming-course.png",
+      name:"R Programming Course              ",
+      price:"2999",
+      line:"--------------------------------------------",
+      EMI:"EMI starts at ₹172/month",
+      Des:"Learn r programming online. Sign up for this online r progra ...",
+    },
+
+      ]
+
+       
+
+      console.log(course)
+
+     
+      console.log(onlinecourse)
+       
+      function showcourse(){
+     let course_div = document.getElementById("online_course")
+
+       onlinecourse.forEach(function(course){
+
+        let div = document.createElement("div");
+        // div.setAttribute('id', )
+
+        let course_name=document.createElement("p")
+        course_name.setAttribute('class', 'p_name');
+        course_name.innerText=course.name;
+
+        let course_price=document.createElement("p");
+        course_price.setAttribute('class', 'p_price');
+        course_price.innerText=course.price;
+               
+        let image = document.createElement("img")
+        image.src=course.image;
+      
+        let des=document.createElement("p");
+        des.setAttribute('class', 'p_des');
+        des.textContent=course.Des;
+        
+        let emi =document.createElement("p");
+        emi.setAttribute('class', 'p_emi');
+        emi.textContent=course.EMI
+
+        let Line = document.createElement("p")
+        Line.setAttribute('class', 'p_line');
+        Line.innerHTML=course.line
+
+
+        let btn = document.createElement("button");
+        btn.setAttribute('class', 'button');
+        btn.innerText="ADD TO CART"
+        
+        let btn1 = document.createElement("button");
+        btn1.setAttribute('class', 'button1');
+        btn1.innerText="KNOW MORE"
+
+
+      btn.onclick=function(){
+          add_to_cart(course)
+      }
+      
+      div.append(image ,course_name,des, Line ,course_price ,emi, btn, btn1)
+      course_div.append(div)
+
+      
+       })
+
+      }
