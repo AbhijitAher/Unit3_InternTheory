@@ -4,6 +4,7 @@ const app = express();
 
 app.use(express.json());
 
+
 const connect = require("./configs/db");
 
 
@@ -37,5 +38,4 @@ app.use("/courses", course_controller);
 app.listen(2345, async ()=> {
     await connect();
     console.log("listening on port 2345");
-
 })

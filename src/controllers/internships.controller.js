@@ -5,7 +5,6 @@ const Internship = require("../models/internships.model");
 const router = express.Router();
 //app.use(express.json());
 
-
 router.post("", async (req, res) => {
 
     const internships = await Internship.create(req.body);
@@ -16,11 +15,13 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
 
-    const internships = await Internship.find().lean().exec();
+    const internships = await Internship.find({}).lean().exec();
     //console.log(internships);
 
     return res.status(200).send(internships);
 })
+
+
 
 module.exports = router;
 
