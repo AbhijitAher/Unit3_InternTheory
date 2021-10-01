@@ -51,6 +51,22 @@ app.get("/AllInternships", async (req, res) => {
     })
 })
 
+// app.get("/SearchInternships", async (req, res) => {
+
+//     if(){
+//         let query = 
+//         const internships_data = await Internship.find(query).lean().exec();
+//     }
+//     else if(){
+
+//     }
+    
+//     console.log("AllInternships")
+//     res.render("internship", {       // name of file in views
+//         internships_data: internships_data        // data collected from router.get await function
+//     })
+// })
+
 app.get("/Courses", async (req, res) => {
 
     const courses_data = await Course.find().lean().exec();
