@@ -1,0 +1,82 @@
+* {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+#main {
+  width: 320px;
+  margin: 8% auto;
+  box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%),
+    0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+}
+
+#head {
+  background-color: hsl(0, 56%, 49%);
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  gap: 3%;
+  padding: 5% 5%;
+}
+#language {
+  background-color: rgb(184, 17, 17);
+  color: white;
+  padding: 10px 15px;
+}
+#card_option {
+  background-color: rgb(252, 230, 230);
+  color: #757575;
+  line-height: 35px;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+#new_card_box {
+  padding: 15px;
+}
+#card_data {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 65% 30%;
+  gap: 3%;
+}
+input {
+  margin: 10px 0px;
+  padding: 5px 0px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+#pay_part {
+  background-color: hsl(0, 56%, 49%);
+  text-align: center;
+  color: white;
+  padding: 15px;
+  margin-top: 50px;
+}
+#logo {
+  background-color: white;
+  border-radius: 5px;
+  padding: 6px;
+}
+#remember {
+  padding: 15px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+h5,
+h2,
+h4 {
+  font-weight: 400;
+}
+#cancel {
+  float: right;
+  color: white;
+  border: none;
+  background-color: hsl(0, 56%, 49%);
+  padding: 0px;
+}
+#money {
+  font-weight: 400;
+  font-size: 30px;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your_Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/cart.css">
+
+</head>
+<body>
+    <div id="main">
+        <h5>Cart</h5>
+        <div id="content">
+            <div id="cart">
+                <% var total = 0 %>
+                <% carts_data.forEach(function(el){%>
+                    <div>
+                        <img style="width: 150px;"src=<%= el.image_url %>/>
+                        <p><%= el.course_name %></p>
+                        <p><%= el.price %></p>
+                       <% total = total+ Number(el.price) %>
+                    </div>
+                    <% }) %>
+                   <!-- let course_name=document.createElement("p")
+                  course_name.innerText=course.name;
+                  let course_price=document.createElement("p");
+                  course_price.innerText=course.price;
+                   let image = document.createElement("img");
+                   image.src=course.image;
+                   image.style.width="150px";
+                   div.append(image ,course_name,course_price);
+             -->
+            </div>
+            <div id= "checkout-box">
+                <div id="checkout">
+                    <div id="amount" class="bottom_border">
+                        <p class="top_p">Amount</p>
+                        <p id="amountvalue"> <%= total %></p>
+                    </div>
+                    
+                    <div id="cgst" class="bottom_border">
+                        <p class="top_p">CGST 9%</p>
+                        <% var cgst =  Math.ceil(total*0.09) %>
+                        <p id="cgstvalue"><%= cgst %></p>
+                    </div>
+                    
+                    <div id="sgst" class="bottom_border">
+                        <p class="top_p">SGST 9%</p>
+                        <% var sgst = Math.ceil(total*0.09) %>
+                        <p id="sgstvalue"><%= sgst %></p>
+                    </div>
+                    
+                    <div id="total">
+                        <h3>Total:</h3>
+                        <p><%= Math.ceil(total+(cgst+sgst)) %></p>
+                    </div>
+                    <div id="coupon">
+                        <input type="text" placeholder="Coupon Code"/>
+                        <button type="submit" class="go">Go</button>
+                    </div>
+                    <div id="checkout_btn">
+                        <button class="checkout_button" onclick=location.href="http://localhost:2345/Payment-Options">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+  <div id="main_base">
+    <div id="content_base">
+         <div id="upper_part">
+             <div id="image">
+                 <img src="https://image.flaticon.com/icons/png/512/145/145802.png
+                 "/>
+                 <img src="https://image.flaticon.com/icons/png/512/1419/1419518.png"/>
+                 <img src="https://image.flaticon.com/icons/png/512/124/124021.png"/>
+                 <img src="https://img-premium.flaticon.com/png/512/1377/premium/1377231.png?token=exp=1630134186~hmac=ba6142ed255cc44bb2381ece8bf4d785"/>
+             </div>
+             <div id="place">
+                 <h4>BY PLACE</h4>
+                 <p>Internships In Mumbai</p>
+                 <p>Internships In Delhi</p>
+                 <p>Internships In Bangalore</p>
+                 <p>Internships In Pune</p>
+                 <p>Internships In Hyderabad</p>
+             </div>
+             <div id="profile">
+                     <h4>BY PROFILE</h4>
+                     <p>Marketing Internships</p>
+                     <p>Business Development Internships</p>
+                     <p>Content Writing Internships</p>
+                     <p>Graphic Designing Internships</p>
+                     <p>HR Internships</p>
+                     <p>Engineering Internships</p>
+             </div>
+             <div id="type">
+                 <h4>BY TYPE</h4>
+                 <p>Full Time Internships</p>
+                 <p>Part Time Internships</p>
+                 <p>Work From Home Internships</p>
+             </div>
+         </div>
+         <div id="lower_part">
+             <div id="detail">
+                 <h3>FIND INTERNSHIP</h3>
+                 <h3>POST INTERNSHIP</h3>
+                 <h3>COURSES</h3>
+                 <h3>TERMS AND CONDITIONS</h3>
+                 <h3>PRIVACY POLICY</h3>
+                 <h3>CONTACT US</h3>
+                 <h3>ABOUT US</h3>
+                 <h3>SITEMAP</h3>
+             </div>
+             <div id="year">
+                 <h3>© 2015 - 2021 INTERNTHEORY. ALL RIGHTS RESERVED.</h3>
+             </div>
+         </div>
+   </div>
+</div> 
+
+
+
+
+
+
+
+
+    <script>
+    let cart_data= JSON.parse(localStorage.getItem("course_cart"))
+     console.log(cart_data)
+    //   var total=0;
+    //   cart_data.forEach(function(course){
+          
+    //     let div= document.createElement("div")
+    //    let course_name=document.createElement("p")
+    //   course_name.innerText=course.name;
+    //   let course_price=document.createElement("p");
+    //   course_price.innerText=course.price;
+    //    let image = document.createElement("img");
+    //    image.src=course.image;
+    //    image.style.width="150px";
+    //    div.append(image ,course_name,course_price);
+
+
+
+    //   document.getElementById("cart").append(div);
+      
+    //   total= total+ Number(course.price);
+      
+    
+    //   });
+    //  document.getElementById("amountvalue").append(total)
+      
+
+     // var  cgst =Math.ceil((total*0.09));
+     //   document.getElementById("cgstvalue").innerHTML=cgst;
+       // var sgst=Math.ceil(total*0.09);
+       //  document.getElementById("sgstvalue").innerHTML=sgst;
+       //  var final = Math.ceil(total+(cgst+sgst));
+
+     //    var finalvalue=document.createElement("p")
+     //     console.log(finalvalue)
+
+       //  finalvalue.innerHTML=final;
+       //  document.getElementById("total").append(finalvalue)
+   
+        var final_object = localStorage.setItem("final_cost", JSON.stringify(final));
+
+    </script>
+
+</body>
+</html>   

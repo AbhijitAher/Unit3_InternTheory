@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay2_Part</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/pay2.css">
+
+</head>
+<body>
+    <div id="main">
+        <div id="content">
+            <div id="head">
+                <div id="logo">
+                    <img src="https://cdn.razorpay.com/logos/8BOCiNqJJB6Zfs_medium.jpg"/>
+                </div>
+                <div id="heading">
+                    <button id="cancel"; onclick=location.href="http://localhost:2345/Cart">X</button>
+                    <h2>Intern Theory</h2>
+                    <p>Purchase Description</p>
+                    <div id="money"></div>
+                </div>
+            </div>
+            <div id="language">
+                <h4>English</h4>
+            </div>
+            <div id="card_option">
+                <h5>Card Detail</h5>
+            </div>
+            <div id="new_card_box">
+                <div id="new_card_heading">
+                    <h5>Add New Card</h5>
+                </div>
+                <div id="card_data">
+                    <input type="number" id = "cardNumber" placeholder="Card Number"/>
+                    <input type="text" id = "exp" placeholder="MM/YY"/>
+                    <input type="text"  id = "cardName" placeholder="Card Holder's name"/>
+                    <input type="password" maxlength="3" id = "cvv" placeholder="CVV"/>
+                </div>
+            </div>
+            <div id="remember">
+                <input type="checkbox"/>
+                <label>Remember Card</label>
+            </div>
+            <div id="pay_part">
+                <p id="payment" onclick="validate()">PAY</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    var pay_money = localStorage.getItem("final_cost");
+   // console.log(pay_money);
+    document.getElementById("money").innerHTML = "₹" + "  " + pay_money;
+
+    function validate(){
+        var cName = document.getElementById('cardNumber').value;
+        var expiry = document.getElementById('exp').value;
+        var card_name = document.getElementById('cardName').value;
+        var cvvNumber = document.getElementById('cvv').value;
+
+        var obj = {};
+        
+
+        if(cName == '' || cName.length != 16){
+            alert("Card Number invalid!");
+        }else{
+            obj.c_no = cName;
+        }
+
+        if(expiry == ''){
+            alert("Please enter all the fields");
+        }else{
+            obj.Expire= expiry;
+        }
+
+        if(card_name == ''){
+            alert("Please Enter Card Holders Name");
+        }else{
+            obj.name = card_name;
+        }
+
+        if(cvvNumber == '' || cvvNumber.length < 3){
+            alert("Enter a valid cvv Number");
+        }else{
+            obj.cvv = cvvNumber;
+        }
+        
+        console.log('obj:', obj);
+        
+        if (Object.values(obj).length == 4){
+            
+            setTimeout(function(){
+                alert('Payment Successful, Thank You form Intern Theory!');
+                window.location.href = "http://localhost:2345/InternTheory";
+            }, 5000);
+        }
+    }
+        
+</script>

@@ -1,0 +1,287 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  z-index: 1;
+  box-shadow: 0px 2px 2px -1px rgb(0 0 0 / 20%);
+}
+
+#img1 {
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#img2 {
+  margin: 0;
+  height: 45px;
+  cursor: pointer;
+}
+
+#img3 {
+  float: right;
+  padding: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#signinbtn {
+  background-color: red;
+  padding: 10px;
+  float: right;
+  width: 100px;
+  border-radius: 5px;
+  margin: 15px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
+    0px 2px 1px -1px rgb(0 0 0 / 12%);
+}
+#signinbtn:hover {
+  background-color: rgb(94, 2, 2);
+}
+
+body {
+  background-color: rgb(241, 240, 240);
+}
+#heading {
+  width: 100%;
+  height: 200px;
+  background-image: url(https://assets.interntheory.com/creative/courses/listpage/Course-bannerbg.jpg);
+  background-size: cover;
+  padding: 0px;
+  margin-top: 70px;
+}
+#heading img {
+  width: 80%;
+  height: 200px;
+  margin-left: 120px;
+  margin-top: 0px;
+}
+.intro h4 {
+  text-align: left;
+  margin-left: 0px;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.54);
+  letter-spacing: 0.0075em;
+  margin-left: 9%;
+  margin-right: 9%;
+  width: auto;
+}
+.intro p {
+  text-align: left;
+  margin-left: 0px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: 0;
+  margin-bottom: 25px;
+  margin-left: 9%;
+  margin-right: 9%;
+  width: auto;
+}
+#details {
+  display: grid;
+  grid-template-rows: auto;
+  margin-left: 11%;
+  margin-right: 9%;
+}
+#online_course {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-gap: 2%;
+  padding: 8px;
+  margin: 0;
+}
+#online_course img {
+  width: 100%;
+  height: 140px;
+  background-size: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#online_course div {
+  background-color: white;
+  border-radius: 4px;
+  height: 350px;
+  box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
+    0px 2px 1px -1px rgb(0 0 0 / 12%);
+}
+#online_course .p_name {
+  padding: 16px 16px 0px 16px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.87);
+}
+#online_course .p_des {
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: 3px;
+}
+#online_course .p_price {
+  margin-right: 15px;
+  text-align: right;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Roboto", sans-serif;
+}
+#online_course .p_emi {
+  margin-right: 15px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffb326;
+}
+.button {
+  height: 30px;
+  border: none;
+  background-color: rgb(224, 5, 5);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  border-radius: 4px;
+  float: right;
+  box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%),
+    0px 3px 1px -2px rgb(0 0 0 / 12%);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  padding: 4px 8px;
+  min-width: 64px;
+  font-size: 0.8125rem;
+  margin: 10px 5px 10px 0px;
+}
+.button:hover {
+  background-color: rgb(94, 2, 2);
+}
+.button1 {
+  border: none;
+  height: 30px;
+  color: rgb(0, 162, 255);
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  margin-top: 12px;
+  border-radius: 4px;
+  float: right;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  padding: 4px 8px;
+  min-width: 64px;
+  font-size: 0.8125rem;
+  margin: 10px 0px 10px 0px;
+}
+.button1:hover {
+  background-color: rgb(222, 247, 252);
+}
+#online_course .p_line {
+  margin: 10px 10px 0 10px;
+  font-size: 18px;
+  text-align: right;
+  color: gray;
+}
+
+#main {
+  width: 100%;
+  height: 30%;
+  margin-top: 50px;
+  background-color: #446478;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+#content {
+  padding: 1% 8%;
+}
+#upper_part {
+  display: grid;
+  grid-template-columns: 10% 25% 25% 25%;
+  gap: 3%;
+  margin: auto;
+}
+#detail {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10%;
+  gap: 2%;
+  border-bottom: 1px solid rgb(204, 200, 200);
+}
+#year {
+  text-align: center;
+}
+#upper_part {
+  padding-top: 30px;
+}
+#upper_part p {
+  padding-top: 10px;
+}
+#upper_part h4 {
+  border-bottom: 1px solid rgb(207, 202, 202);
+  padding-bottom: 10px;
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+#upper_part h3 {
+  font-size: 14px;
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+#lower_part {
+  padding-top: 30px;
+}
+#lower_part h3 {
+  font-size: 14px;
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+#main img {
+  width: 20%;
+  margin: 5px;
+}
+#image {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#detail {
+  padding-left: 50px;
+  text-align: center;
+}
+#a1 {
+  color: white;
+  text-decoration: none;
+}

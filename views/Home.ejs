@@ -11,7 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <title>Internship and Online courses for College Students|Intern Theory </title>
-    <style>
+
+    <link rel="stylesheet" href="css/Home.css">
+
+
+    <!-- <style>
         * {
             padding: 0px;
             margin: 0px;
@@ -413,7 +417,7 @@
                     text-align: center;
                 }
 
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -432,26 +436,26 @@
         <div id="box1">
             <div class="box1_content">
                 <div class="coffee_img1">
-                    <h2>Let's Get You <b style="background-color: red;padding:5px; text-align: center;">Ready</b></h2>
-                    <p style="text-align: center;">The One Stop Upgrade Your Resume.Expand Your Skillset.Do An
+                    <h2>Let's Get You <b id="a2"> Ready</b></h2>
+                    <p id="a3"> The One Stop Upgrade Your Resume.Expand Your Skillset.Do An
                         Internship.Get Placed.</p>
                   <div id ="preference" style="margin-top: 50px">
-                    <div id="part1" style="margin-left: 30px">
-                        <select style="width: 250px; padding:8px; margin-right: 20px; font-size: 18px; border: none; border-bottom: 1px solid black;" class="cities">
+                    <div id="part1">
+                        <select class="cities" id="a5">
                             <option value="">Cities..</option>
                             <% cities_data.forEach(function(element){ %>
                             <option value=""><%= element.city_name %></option>
                             <% }) %>
                         </select>
                         
-                        <select style="width: 250px; padding: 8px; margin-right: 20px; font-size: 18px; border: none; border-bottom: 1px solid black;" class="type">
+                        <select class="type" id="a6">
                             <option value="">Type..</option>
                             <% types_data.forEach(function(element){ %>
                             <option value=""><%= element.type %></option>
                             <% }) %>
                         </select>
 
-                        <select style="width: 250px; padding: 8px; font-size: 18px; border: none; border-bottom: 1px solid black;" class="coursepref">
+                        <select class="coursepref" id="a7">
                             <option>Preference..</option>
                             <% category_data.forEach(function(element){ %>
                             <option value=""><%= element.category %></option>
@@ -460,7 +464,7 @@
                     </div>
                     <div id="right">
                         <div id="part2">
-                            <input style="width: 250px; padding: 8px 0px 8px 8px; font-size: 18px; border: none; border-bottom: 1px solid black;" type="search" placeholder="Search"/>
+                            <input type="search" placeholder="Search" id="a8"/>
                         </div>
                         <div id="srh">
                             <button id="srhbtn">SEARCH</button>
@@ -477,7 +481,7 @@
 
     <div id="box2">
         <div id="box2_text">
-            <h2>PLETHORA OF OPPORTUNITIES <b style="color:red;">FOR YOU</b></h2>
+            <h2>PLETHORA OF OPPORTUNITIES <b id="b1">FOR YOU</b></h2>
             <!-- <p>_____________________________________________________________________________________</p> -->
             <p>We are on a mission to connet employers to young talent all over India .With our strong coperate network
                 ,it will no longer be a challenge to find the right internship for you. </p>
@@ -515,9 +519,8 @@
 
 
     <div id="Exp-box">
-        <h1
-            style="text-align: center; margin-bottom: 20px;font-style: normal;font-weight: 700;line-height: 47px;font-size: 35px;color:rgba(0 ,0 ,0 ,0.87)">
-            LET'S GET SOME <b style="color:red;">WORK EXPERIENCE</b></h1>
+        <h1 id="b2">
+            LET'S GET SOME <b id="b3">WORK EXPERIENCE</b></h1>
         <div id="internship">
             <div><img src="https://assets.interntheory.com/creative/home-internships/Marketing-Icon.jpg"></div>
             <div><img src="https://assets.interntheory.com/creative/home-internships/BD.jpg"></div>
@@ -531,21 +534,20 @@
     </div>
 
     <div class="coursebox_main">
-        <h1>HOW ABOUT <b style="color:red;">UPSKILLING ?</b></h1>
+        <h1>HOW ABOUT <b id="b4">UPSKILLING ?</b></h1>
 
         <div id="coursebox1"></div>
         <div id="coursebox2"></div>
         <div id="coursebox3"></div>
     </div>
 
+    <div id="img11">
+        <img id="c1" src="https://assets.interntheory.com/creative/chart.png" />
+    </div>
+
     <div class="image_text">
-
-        <div id="imagetree">
-            <img style="max-width:300px" src="https://assets.interntheory.com/creative/chart.png" />
-        </div>
-
         <div class="text1">
-            <h1>WE ARE CONSTANTLY <b style="color:red;">GROWING</b></h1>
+            <h1>WE ARE CONSTANTLY <b id="b5">GROWING</b></h1>
             <p>_________________________________________________________________</p>
             <p>we are on a mission to help every student in India.Upgrading your CV and getting you a meaningful job
                 remains our sole motive and we not stopping anytime soon.</p>
@@ -559,7 +561,7 @@
 
             <div>
                 <div class="testimage">
-                    <img style="border-radius: 50%;"
+                    <img id="c2"
                         src="https://assets.interntheory.com/img/testimonial-image/in3.jpg">
 
                     <h5>Amani Nagda</h5>
@@ -638,16 +640,16 @@
 
             
     document.getElementById("img3").addEventListener("click" ,function(){
-        location.href="cart.html"
+        location.href="http://localhost:2345/Cart"
     })
 
 
     document.getElementById("img2").addEventListener("click" ,function(){
-        location.href="Home.html"
+        location.href="http://localhost:2345/InternTheory"
     })
 
     document.getElementById("All-Internships").addEventListener("click" ,function(){
-        location.href="internship.html"
+        location.href="http://localhost:2345/AllInternships"
     })
 
 </script>

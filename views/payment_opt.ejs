@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay1_Part</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <link rel="stylesheet" href="css/pay1.css">
+
+
+</head>
+<body>
+    <div id="main">
+        <h4>Pay Via</h4>
+        <div id="box">
+           <div class="card"><span class="material-icons">
+            credit_card</span>CREDIT CARD</div>
+           <div class="card" id="debit_card"><span class="material-icons">
+            credit_card</span>DEBIT CARD</div>
+           <div class="card">NETBANKING</div>
+           <div class="card">PAYTM</div> 
+           <div class="card">UPI</div>
+           <div class="card">EMI(CREDIT CARD)</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById("debit_card").addEventListener("click", function(){
+        location.href='http://localhost:2345/Debit-Card-Details';
+    });
+
+</script>

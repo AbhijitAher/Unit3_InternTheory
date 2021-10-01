@@ -1,0 +1,44 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+#main {
+  width: 35%;
+  margin: auto;
+  margin-top: 12%;
+  padding: 3%;
+  box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%),
+    0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+}
+#box {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 4%;
+  padding: 5px;
+}
+#box > div {
+  border: 1px solid rgba(8, 124, 221, 0.5);
+  border-radius: 5px;
+  color: #087cdd;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px 0px 10px 0px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: background-color, box-shadow, border;
+  transition-duration: 250ms, 250ms, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
+    cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms, 0ms, 0ms;
+}
+h4 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 20px;
+  color: #3c4858;
+}
+span {
+  padding-top: 0px;
+}

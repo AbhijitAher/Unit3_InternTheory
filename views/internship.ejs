@@ -8,228 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Roboto', sans-serif;
-        }
-        header {
-            width: 100%;
-            height: 70px;
-            background-color: white;
-            position: fixed;
-            top: 0px;
-            margin: 0px;
-            z-index: 1;
-            box-shadow: 0px 2px 2px -1px rgb(0 0 0 / 20%);
-        }
 
-        #img1 {
-            width: 20px;
-            height: 20px;
-            padding: 20px;
-            cursor: pointer;
-        }
+    <link rel="stylesheet" href="css/internship.css">
 
-        #img2 {
-            margin: 0;
-            height: 45px;
-            cursor: pointer;
-        }
 
-        #img3 {
-            float: right;
-            padding: 20px;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-        }
-
-        #signinbtn {
-            background-color: red;
-            padding: 10px;
-            float: right;
-            width: 100px;
-            border-radius: 5px;
-            margin: 15px;
-            border: 0;
-            color: white;
-            cursor: pointer;
-            box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%);
-        }
-        #signinbtn:hover {
-            background-color: rgb(94, 2, 2);
-        }
-
-       body{
-           background-color: rgb(241, 240, 240);
-       }
-       .image img{
-           margin-left: 7%;
-           margin-right: 10px;
-           width: 20%;
-           float: left;
-           box-shadow: 1px 1px 1px 1px darkgray;
-           margin-top: 80px;
-           
-       }
-       .course{
-           margin-right: 7%;
-           width: 65%;
-           height: auto;
-           background-color: white;
-           float: left;
-           margin-bottom: 20px;
-           border-radius: 5px;
-           box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%);
-           margin-top: 80px;
-       }
-       .details{
-           margin: 20px;
-           font-family: 'Roboto', sans-serif;            
-           color: rgb(83, 83, 83);
-       }
-       .intern1 {
-           display: grid;
-           grid-template-columns: 20% 60% 20%;
-       }
-       .intern1 img{
-           width: 90px;
-           align-items: center;
-           padding: 20px;
-       }
-       button{
-           background-color:white;
-           width: 130px;
-           color: rgb(0, 171, 238);
-           border: white;
-           margin-top: 80px;
-       }
-       .apply1{
-           margin-left: 30px;
-       }
-       .apply1 p{
-           margin-left: 50px;
-       }
-       .apply2{
-           margin-left: 30px;
-       }
-       .apply2 p{
-           margin-left: 30px;
-       }
-       #line{
-           width: auto;
-           border: 1px dashed rgb(199, 198, 198);
-       }
-       .details button{
-           height: 40px;
-           border-radius: 5px;
-           color: rgb(0, 47, 255);
-           font-family: 'Roboto', sans-serif;            
-           font-size: 15px;
-       }
-       .details button:hover{
-        background-color: rgb(222, 247, 252);
-       }
-       .image :hover{
-        opacity: 0.8;
-       }
-       .details h3{
-           margin-top: 15px;
-           margin-bottom: 10px;
-       }
-       .intern1 p {
-        margin-bottom: 10px;
-       }
-       #end{
-            width: 100%;
-            height: 0px;
-            background-color: rgb(241, 240, 240);
-            margin-top: 50px;
-            clear: both;
-        }
-
-        #main {
-            width: 100%;
-            height: 30%;
-            background-color: #446478;
-            font-family: 'Roboto', sans-serif;
-            color: white;
-            font-size: 14px;
-            line-height: 21px;
-            font-weight: 400;
-        }
-        #content {
-            padding: 1% 8%;
-        }
-        #upper_part {
-            display: grid;
-            grid-template-columns: 10% 25% 25% 25%;
-            gap: 3%;
-            margin: auto;
-        }
-        #detail {
-            display: grid;
-            grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10%;
-            gap: 2%;
-            border-bottom: 1px solid rgb(204, 200, 200);
-        }
-        #year {
-            text-align: center;
-        }
-        #upper_part{
-            padding-top: 30px;
-        }
-        #upper_part p{
-            padding-top: 10px;
-        }
-        #upper_part h4 {
-            border-bottom: 1px solid rgb(207, 202, 202);
-            padding-bottom: 10px;
-            color: white;
-            font-size: 14px;
-            line-height: 21px;
-            font-weight: 400;
-        }
-        #upper_part h3 {
-            font-size: 14px;
-            color: white;
-            font-size: 14px;
-            line-height: 21px;
-            font-weight: 400;
-        }
-        #lower_part{
-            padding-top: 30px;
-        }
-        #lower_part h3{
-          font-size: 14px;
-            color: white;
-            font-size: 14px;
-            line-height: 21px;
-            font-weight: 400;
-        }
-        #main img {
-            width: 20%;
-            margin: 5px;
-        }
-        #image {
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-        }
-        #detail{
-            padding-left: 50px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <header>
         <div id="navbar">
             <img src="https://image.flaticon.com/icons/png/512/1828/1828859.png" id="img1" />
             <img src="https://assets.interntheory.com/creative/logo.png" id="img2" />
-            <button id="signinbtn"><a  style="color: white;text-decoration: none";
+            <button id="signinbtn"><a  id="a1";
                 href="login_student.html">SIGN OUT</a></button>
              <img src="https://image.flaticon.com/icons/png/512/4297/4297127.png" id="img3" />
 
@@ -243,7 +32,7 @@
 
         <div class="course" >
             <div class="details" id="allCourse">
-                <p style="font-family: 'Roboto', sans-serif; font-size: 25px; margin-bottom: 0px;">All Internships</p>
+                <p id="p1" >All Internships</p>
 
                 <!-- Courses -->
                 <div class="intern1"  id="d1">
@@ -262,7 +51,7 @@
                     </div>  
                     <div class="apply1">
                         <p>4-6 Weeks</p>
-                        <button><a style="color: rgb(0, 47, 255);text-decoration: none;" href="onlinecourse.html">UPGRADE SKILLS</a></button>
+                        <button><a id="a2" href="http://localhost:2345/Courses">UPGRADE SKILLS</a></button>
                     </div>  
                 </div>
                 <div id="line"></div>
@@ -288,11 +77,11 @@
                         <!-- <% arr.slice(0,-1)%> -->
                         <p><%= arr %></p>
                         <h4>Stipend: <%= el.stipend %> </h4>
-                    
+                        
                     </div>  
                     <div class="apply1">
                         <p><%= el.time_left %></p>
-                        <button><a style="color: rgb(0, 47, 255);text-decoration: none;" href="onlinecourse.html">UPGRADE SKILLS</a></button>
+                        <button><a id="a3" href="http://localhost:2345/Marketing-Ambasssador">VIEW AND APPLY</a></button>
                     </div><br>
                 </div>
                 <div id="line"></div>
@@ -358,15 +147,15 @@
 
 <script>
     document.getElementById("img2").addEventListener("click" ,function(){
-        location.href="home.html"
+        location.href="http://localhost:2345/InternTheory"
     })
 
     document.getElementById("img3").addEventListener("click" ,function(){
-        location.href="cart.html"
+        location.href="http://localhost:2345/Cart"
     })
 
     document.getElementById("img1").addEventListener("click" ,function(){
-        location.href="internship.html"
+        location.href="http://localhost:2345/AllInternships"
     })
 </script>
 

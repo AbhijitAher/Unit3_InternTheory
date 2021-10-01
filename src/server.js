@@ -10,11 +10,16 @@ const connect = require("./configs/db");
 
 app.set("view engine", "ejs");
 
+app.use(express.static('public'));   //app.use(express.static(__dirname + '/public'));
+
 const Type = require("./models/type.model");
 const City = require("./models/city.model");
 const Category = require("./models/category.model");
 const Internship = require("./models/internships.model");
 const Course = require("./models/course.model");
+const Cart = require("./models/cart.model");
+
+
 
 
 // const internships_controller = require("./controllers/internships.controller")
@@ -27,6 +32,8 @@ app.get("/InternTheory", async (req, res) => {
     const types_data = await Type.find().lean().exec();
     const cities_data = await City.find().lean().exec();
     const category_data = await Category.find().lean().exec();
+
+
 
     res.render("Home", {            // name of file in views
         types_data: types_data, 
@@ -53,6 +60,46 @@ app.get("/Courses", async (req, res) => {
          courses_data:courses_data
     })
 })
+
+
+app.get("/Cart", async (req, res) => {
+
+    const carts_data = await Cart.find().lean().exec();
+    //console.log(course);
+
+     res.render("cart",{
+         carts_data:carts_data
+    })
+})
+
+
+app.get("/Payment-Options", async (req, res) => {
+
+  //  const carts_data = await Cart.find().lean().exec();
+    //console.log(course);
+
+     res.render("payment_opt",{})
+})
+
+
+
+app.get("/Debit-Card-Details", async (req, res) => {
+
+    //  const carts_data = await Cart.find().lean().exec();
+      //console.log(course);
+  
+       res.render("debit_card",{})
+  })
+
+  
+
+app.get("/Marketing-Ambasssador", async (req, res) => {
+
+    //  const carts_data = await Cart.find().lean().exec();
+      //console.log(course);
+  
+       res.render("marketing",{})
+  })
 
 
 // POST Requests
