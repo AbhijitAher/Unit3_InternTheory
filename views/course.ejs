@@ -48,7 +48,7 @@
                 <p class="p_line">--------------------------------------------</p>
                 <p class="p_price"> ₹ <%= el.price %></p>
                 <p class="p_emi">EMI Starting At ₹ <%= el.emi %> /month</p>
-                <button class="button">ADD TO CART</button>
+                <button name="btn" onclick="reply_click(this.id)" class="button" id=<%= el._id %>>ADD TO CART</button>
                 <button class="button1">KNOW MORE</button>
             </div>
        <% }) %>
@@ -109,7 +109,54 @@
   </div> 
      <script>
 
+  localStorage.setItem("cart_items",JSON.stringify([]))
 
+  function reply_click(clicked_id)
+  {
+
+      let cart_data=JSON.parse(localStorage.getItem("cart_items"))
+
+      var temp = cart_data;
+      console.log(temp.length);
+
+        for(var i = 0; i <= temp.length; i++){
+            console.log("for")
+        if(clicked_id == temp[i]){
+            console.log("if")
+            alert("already added");
+        }else{
+            console.log("else")
+            cart_data.push(clicked_id);
+        localStorage.setItem("cart_items" ,JSON.stringify(cart_data))   
+     }
+
+  }
+  }
+  
+
+//    function add_to_cart(course){
+//    console.log(course)
+ 
+//    }
+
+    // btn3.addEventListener('click', ()=>{
+    //     var cart_btn = document.getElementsByName("btn");
+    //    console.log("hi")
+    //     cart_btn.forEach((element)=>{
+    //         if(element.checked){
+    //         console.log(element.value);
+    //     }
+    //     })
+    // }) 
+//    cart_btn.addEventListener("click", function() {
+//        console.log(cart_btn);
+//     })
+// //    
+
+    // function add_cart(){
+    //      console.log("Hi");
+        
+    //     }
       // converting course into json
     // var course_obj=JSON.stringify(course);
     // localStorage.setItem("mycourse" ,course_obj)
@@ -146,6 +193,9 @@
             document.getElementById("img1").addEventListener("click" ,function(){
         location.href="http://localhost:2345/AllInternships.html"
     })
+
+
+    
 
     </script>
 

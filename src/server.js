@@ -80,10 +80,13 @@ app.get("/Courses", async (req, res) => {
 
 app.get("/Cart", async (req, res) => {
 
-    const carts_data = await Cart.find().lean().exec();
-    //console.log(course);
+    // ["6154454a925b91c4426bbaf4","6154458f925b91c4426bbaf6"]
+    // ["61544487925b91c4426bbaef","61544503925b91c4426bbaf2"]
+    const carts_data = await Course.find({_id:["61544487925b91c4426bbaef","61544503925b91c4426bbaf2"]}).lean().exec();
+    console.log(carts_data);
 
      res.render("cart",{
+         
          carts_data:carts_data
     })
 })
@@ -156,6 +159,8 @@ router.post("", async (req, res) => {
     return res.status(201).send(course);
 })
 
+// let cart_arr = JSON.parse(localStorage.getItem("cart_items"));
+//     console.log(cart_arr);
 
 //console.log(internships_controller);
 
