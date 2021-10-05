@@ -95,6 +95,6 @@ To run this project, you will need to add the following environment variables to
 For support, contact us on linkedin.
 
   - [Abhijit Aher](https://www.linkedin.com/in/abhijitaher/)
-  - [Rohitkumar Chaudhary(https://www.linkedin.com/in/rohitkumar-chaudhari-0160b9119/)
+  - [Rohitkumar Chaudhary](https://www.linkedin.com/in/rohitkumar-chaudhari-0160b9119/)
   - [Nikhil joshi](https://www.linkedin.com/in/nikhil-joshi-1941b01aa/)
   - [Utkarsh Kumar](https://www.linkedin.com/in/utkarsh-kumar-2ab1b1222/)
