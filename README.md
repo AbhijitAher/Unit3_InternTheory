@@ -85,7 +85,7 @@ To run this project, you will need to add the following environment variables to
 ## Screenshots
 
 ### - Landing Page
-![App Screenshot]()
+-[App Screenshot](https://i.ibb.co/SXDZgGD/Intern-Theory-Hero-Img.jpg)
 
 
 
